@@ -9,14 +9,20 @@ Router.get('/',(req,res)=>{
 })
 
 Router.post('/',(req,res)=>{
-    console.log(req.body)
-    const data =postmodel({
-        name:req.body.name,
-        pass:req.body.pass
-    })
-    data.save()
-    console.log(data)
-    res.redirect('/')
+
+
+    try{
+        console.log(req.body)
+        const data =postmodel({
+            name:req.body.name,
+            pass:req.body.pass
+        })
+        data.save()
+        console.log(data)
+        res.redirect('/')
+    }catch{
+        console.log('error')
+    }
 })
 
 module.exports= Router

@@ -11,6 +11,7 @@ mongoose.connect('mongodb+srv://ravimude:ajay7777@cluster0.thi8yzl.mongodb.net/f
 
 port = process.env.port || 5555;
 app.set('view engine', 'ejs')
+mongoose.set('strictQuery', true)
 
 
 
