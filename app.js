@@ -3,7 +3,7 @@ const app = express();
 const mongoose = require('mongoose')
 const bodyParser = require('body-parser')
 
-mongoose.connect('mongodb+srv://ravimude:ajay7777@cluster0.thi8yzl.mongodb.net/form1')
+mongoose.connect('mongodb+srv://ravimude:ajay7777@cluster0.thi8yzl.mongodb.net/demo?retryWrites=true&w=majority')
 .then(()=>{ console.log('connected with db')})
 .catch(()=>{ console.log('not conneted with db ')})
 
